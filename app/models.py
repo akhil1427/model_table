@@ -21,3 +21,10 @@ class AccessRecord(models.Model):
     Author=models.CharField(max_length=100)
     def __str__(self):
         return self.Author
+
+
+class Reviews(models.Model):
+    name=models.ForeignKey(Webpage,on_delete=models.CASCADE)
+    rating=models.IntegerField()
+    def __str__(self):
+        return self.name
