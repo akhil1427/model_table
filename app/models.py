@@ -23,8 +23,3 @@ class AccessRecord(models.Model):
         return self.Author
 
 
-class Reviews(models.Model):
-    name=models.ForeignKey(Webpage,on_delete=models.CASCADE)
-    rating=models.IntegerField()
-    def __str__(self):
-        return self.name
